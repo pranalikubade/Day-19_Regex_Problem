@@ -17,5 +17,13 @@ public class User_Registration {
         } else {
             System.out.println("Invalid FirstName");
         }
+        System.out.println("Enter LastName");
+        String lastname = scan.next();
+        Matcher LastName = Name.matcher(lastname);
+        if (LastName.matches()) {
+            System.out.println("LastName :" + lastname);
+        } else {
+            System.out.println("Invalid LastName");
+        }
     }
 }
