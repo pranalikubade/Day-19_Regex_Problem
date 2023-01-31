@@ -33,7 +33,7 @@ public class User_Registration {
         System.out.println("Enter EmailId");
         String emailId = scan.next();
         Matcher email = Email.matcher(emailId);
-        if (LastName.matches()) {
+        if (email.matches()) {
             System.out.println("EmailId:" + emailId);
         } else {
             System.out.println("Invalid EmailId");
@@ -41,15 +41,15 @@ public class User_Registration {
         System.out.println("Enter MobileNo. with Country Code");
         String num = scan.next();
         Matcher mobile = phone.matcher(num);
-        if (LastName.matches()) {
-            System.out.println("MobileNo:" + mobile);
+        if (mobile.matches()) {
+            System.out.println("MobileNo:" + num);
         } else {
             System.out.println("Invalid MobileNo");
         }
         System.out.println("Enter Password");
         String pass = scan.next();
         Matcher password = Password.matcher(pass);
-        if (LastName.matches()) {
+        if (password.matches()) {
             System.out.println("Password " + pass);
         } else {
             System.out.println("Invalid Password");
