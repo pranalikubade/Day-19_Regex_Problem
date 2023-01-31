@@ -30,7 +30,7 @@ public class User_Registration {
         System.out.println("Enter EmailId");
         String emailId = scan.next();
         Matcher email = Email.matcher(emailId);
-        if (LastName.matches()) {
+        if (email.matches()) {
             System.out.println("EmailId:" + emailId);
         } else {
             System.out.println("Invalid EmailId");
