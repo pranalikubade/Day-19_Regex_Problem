@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 
 public class User_Registration {
     static Pattern Name = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+    static Pattern Email =Pattern.compile("^[a-zA-Z.]+@(.+)$");
+
     public static void main(String[] args) {
         System.out.println("Welcome to Regex Problem");
         Scanner scan = new Scanner(System.in);
@@ -24,6 +26,14 @@ public class User_Registration {
             System.out.println("LastName :" + lastname);
         } else {
             System.out.println("Invalid LastName");
+        }
+        System.out.println("Enter EmailId");
+        String emailId = scan.next();
+        Matcher email = Email.matcher(emailId);
+        if (LastName.matches()) {
+            System.out.println("EmailId:" + emailId);
+        } else {
+            System.out.println("Invalid EmailId");
         }
     }
 }
