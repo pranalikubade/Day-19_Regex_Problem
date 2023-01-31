@@ -8,6 +8,8 @@ public class User_Registration {
     static Pattern Name = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
     static Pattern Email =Pattern.compile("^[a-zA-Z.]+@(.+)$");
     static Pattern phone = Pattern.compile("^[0-9]{2}\\s{1}[0-9]{10}$");
+    static Pattern Password =Pattern.compile("^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[!@#$%^&*()-_+=]{1}.{8,}$");
+
 
     public static void main(String[] args) {
         System.out.println("Welcome to Regex Problem");
@@ -36,13 +38,21 @@ public class User_Registration {
         } else {
             System.out.println("Invalid EmailId");
         }
-        System.out.println("Enter MobileNo.");
+        System.out.println("Enter MobileNo. with Country Code");
         String num = scan.next();
         Matcher mobile = phone.matcher(num);
         if (LastName.matches()) {
             System.out.println("MobileNo:" + mobile);
         } else {
             System.out.println("Invalid MobileNo");
+        }
+        System.out.println("Enter Password");
+        String pass = scan.next();
+        Matcher password = Password.matcher(pass);
+        if (LastName.matches()) {
+            System.out.println("Password " + pass);
+        } else {
+            System.out.println("Invalid Password");
         }
     }
 }
